@@ -13,10 +13,10 @@
 
 <h2>ToDo's</h2>
 
-<form>
+<form v-on:submit.prevent="saveNewItem">
 
  <label for="itemName"></label>
- <input id="itemName" type="text">
+ <input id="itemName" type="text" v-model="newItem"/>
 
 <label for="highPriority"></label>
  High Priority: <input id="highPriority" type="radio" name="itemPriority" value="highPriority">
@@ -24,8 +24,8 @@
 <label for="lowPriority"></label>
  Low Priority: <input id="lowPriority" type="radio" name="itemPriority">
 
-<label for="newItem"></label>
- <input id="newItem" type="submit" value="Save">
+<label for="submit"></label>
+ <input type="submit" value="Save">
 
 <br>
 
