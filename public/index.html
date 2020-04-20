@@ -20,10 +20,10 @@
  <input id="itemName" type="text" v-model="newItem"/>
 
 <label for="highPriority"></label>
- High Priority: <input id="highPriority" type="radio" name="itemPriority" value="highPriority">
+ High Priority: <input id="itemPriority" type="radio" name="itemPriority" value="true">
 
 <label for="lowPriority"></label>
- Low Priority: <input id="lowPriority" type="radio" name="itemPriority">
+ Low Priority: <input id="itemPriority" type="radio" name="itemPriority" value="false">
 
 <label for="submit"></label>
  <input type="submit" value="Save">
@@ -31,9 +31,12 @@
 <br>
 
 <ul>
-  <p v-for="(item, index) in items">
-    <span>{{ item.name }}</span>
-  </p>
+
+  <li v-for="item in items">
+  <span><p class="highPriority" v-if="item.itemPriority">{{ item.name  }}</p></span>
+  <span><p class="lowPriority" v-if="!item.itemPriority">{{ item.name  }}</p></span>
+</li>
+
 </ul>
 
 </form>

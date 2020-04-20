@@ -1,7 +1,14 @@
 p {
-  border: black 2px solid;
-  height: 40px;
-  line-height: 40px;
-  width: fit-content;
+  height: 20px;
+  line-height: 20px;
   padding: 10px;
+}
+
+p.highPriority {
+  border: 2px solid orangered;
+  background-color: darkorange
+}
+
+p.lowPriority {
+  border: 2px solid black;
 }
