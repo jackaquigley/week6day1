@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<div id="app"></div>
+<div id="app">
+
 <h2>ToDo's</h2>
 
 <form>
@@ -26,7 +27,17 @@
 <label for="newItem"></label>
  <input id="newItem" type="submit" value="Save">
 
+<br>
+
+<ul>
+  <li v-for="(item, index) in items">
+    <span>{{ item.name }}</span>
+  </li>
+</ul>
+
 </form>
+
+</div>
 
 </body>
 </html>
